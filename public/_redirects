@@ -1,0 +1,5 @@
+# Serve the policy as a public static page, without loading the CRM.
+/privacy             /privacy/             301
+/privacy/index.html  /privacy/             301
+
+# No top-level 404.html: Pages keeps its built-in SPA fallback for CRM routes.

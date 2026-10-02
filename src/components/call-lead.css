@@ -1,0 +1,110 @@
+/* Mobile-only telephone action. The wrappers reserve no space on desktop. */
+.lead-contact-actions,
+.profile-contact-actions {
+  display: none;
+}
+
+.btn.lead-call-btn {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .lead-contact-actions,
+  .profile-contact-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .lead-contact-actions {
+    margin-top: 12px;
+  }
+
+  .profile-contact-actions {
+    margin-top: 14px;
+  }
+
+  .lead-contact-actions:empty,
+  .profile-contact-actions:empty {
+    display: none;
+    margin: 0;
+  }
+
+  .btn.lead-call-btn {
+    display: inline-flex;
+    min-width: 112px;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-color: var(--brand);
+    background: var(--brand);
+    color: var(--brand-ink);
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    touch-action: manipulation;
+  }
+
+  .btn.lead-call-btn:hover {
+    border-color: var(--brand-strong);
+    background: var(--brand-strong);
+    color: var(--brand-ink);
+  }
+
+  .btn.lead-call-btn:focus-visible {
+    outline: 3px solid var(--brand-fg);
+    outline-offset: 3px;
+  }
+
+  .btn.lead-call-btn svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+  }
+
+  .lead-contact-actions .lead-call-btn {
+    width: 100%;
+  }
+
+  .lead-card .top > div:first-child {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .lead-card .top > .btn {
+    flex: 0 0 auto;
+  }
+
+  .lead-card .lead-name {
+    display: block;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .lead-card .meta,
+  .lead-card .top .muted {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (forced-colors: active) and (max-width: 860px) {
+  .btn.lead-call-btn {
+    border-color: ButtonText;
+    background: ButtonFace;
+    color: ButtonText;
+  }
+
+  .btn.lead-call-btn:hover {
+    border-color: Highlight;
+    background: Highlight;
+    color: HighlightText;
+  }
+
+  .btn.lead-call-btn:focus-visible {
+    outline-color: Highlight;
+  }
+}

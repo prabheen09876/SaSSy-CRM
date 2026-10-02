@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#244878" />
+    <title>Workspace CRM</title>
+    <!-- Set the theme before first paint so there's no light-mode flash on a dark-mode load -->
+    <script>
+      (function () {
+        var t;
+        try { t = localStorage.getItem('workspace-crm.theme'); } catch (e) {}
+        if (t !== 'dark' && t !== 'light') {
+          t = 'light';
+          try { if (matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark'; } catch (e) {}
+        }
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', t === 'dark' ? '#101927' : '#244878');
+      })();
+    </script>
+    <!-- installable PWA (manifest is injected by vite-plugin-pwa) -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Workspace CRM" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Quality, non-default pairing: Schibsted Grotesk (display) + Hanken Grotesk (UI) -->
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Schibsted+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

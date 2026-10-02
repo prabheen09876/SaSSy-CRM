@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "workspace-crm-gateway",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-19",
+  "compatibility_flags": ["nodejs_compat"],
+  "send_metrics": false,
+  "observability": {
+    "enabled": true,
+    "redact_query_string": true,
+    "logs": { "head_sampling_rate": 1 },
+    "traces": { "enabled": true, "head_sampling_rate": 0.01 }
+  },
+  // Safe, intentionally unconfigured defaults. Set your own deployment values.
+  // Never add Supabase service-role keys or Cloudflare API tokens.
+  "vars": {
+    "SUPABASE_URL": "",
+    "SUPABASE_PUBLIC_KEY": "",
+    "ALLOWED_ORIGINS": "",
+    "ALLOW_LOCALHOST": "false"
+  }
+}

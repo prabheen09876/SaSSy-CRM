@@ -1,0 +1,54 @@
+.setup-page { max-width: 780px; margin: 36px auto; padding: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.setup-page > .connection-settings { margin: 28px 0; }
+.connection-settings h2 { font-size: 22px; letter-spacing: -.025em; margin-bottom: 8px; }
+.connection-settings > p, .connection-help p { max-width: 68ch; line-height: 1.6; }
+.connection-settings > .field { margin-top: 18px; max-width: 640px; }
+.connection-settings .field input, .connection-settings .field select { width: 100%; }
+.connection-settings .faint { font-size: 12px; margin: 8px 0 18px; }
+.connection-summary { display: grid; gap: 5px; margin: 22px 0; padding: 16px 18px; background: var(--surface-2); border-left: 3px solid var(--brand-fg); color: var(--ink-2); }
+.connection-summary span { font-size: 13px; line-height: 1.6; }
+.connection-next-step { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+.connection-result { color: var(--success); margin-top: 18px; }
+.connection-confirm { display: flex; align-items: flex-start; gap: 10px; max-width: 65ch; font-size: 13px; line-height: 1.5; margin: 16px 0; }
+.connection-confirm input { margin-top: 3px; flex: 0 0 auto; }
+.connection-help { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 13px; }
+.connection-help summary { font-weight: 650; cursor: pointer; }
+.connection-help ol { padding-left: 23px; line-height: 1.6; }
+.connection-help li { margin: 12px 0; }
+.connection-help code { overflow-wrap: anywhere; }
+.connection-settings .save-row { justify-content: flex-start; }
+.login-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.login-setup-note { font-size: 13px; line-height: 1.6; color: var(--ink-2); margin: 0 0 18px; }
+.login-first-setup { margin: 20px 0 8px; padding-top: 18px; border-top: 1px solid var(--line); text-align: left; }
+.login-first-setup strong { color: var(--ink); font-size: 14px; }
+.login-first-setup p { color: var(--ink-2); font-size: 13px; line-height: 1.6; margin: 8px 0 12px; }
+.workspace-entry { max-width: 960px; margin: 0 auto; padding: 32px 24px 64px; }
+.workspace-entry > header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.workspace-entry-intro { margin: 64px 0 28px; max-width: 660px; }
+.workspace-entry h1 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -.04em; line-height: 1.15; margin-bottom: 16px; }
+.workspace-entry p { color: var(--ink-2); font-size: 14px; line-height: 1.6; max-width: 66ch; }
+.workspace-list { display: grid; gap: 0; margin-bottom: 28px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.workspace-choice { display: grid; grid-template-columns: 1fr 120px 130px; gap: 16px; align-items: center; width: 100%; padding: 22px; color: var(--ink); background: var(--surface); border: 0; border-bottom: 1px solid var(--line); text-align: left; cursor: pointer; }
+.workspace-choice:last-child { border-bottom: 0; }
+.workspace-choice:hover { background: var(--brand-soft); }
+.workspace-choice strong { font-size: 17px; overflow-wrap: anywhere; }
+.workspace-choice span { color: var(--ink-2); font-size: 12px; }
+.workspace-create { padding: 26px; }
+.workspace-create .field { max-width: 580px; margin-top: 20px; }
+.workspace-create h2 { font-size: 22px; margin-bottom: 10px; }
+.workspace-create .btn { margin-top: 20px; }
+.workspace-create .faint { margin-top: 14px; font-size: 12px; }
+.workspace-switch { flex-shrink: 0; background: transparent; border: 1px solid var(--on-brand-line); border-radius: 6px; color: var(--on-brand); padding: 6px 9px; font: inherit; font-size: 11px; cursor: pointer; }
+.workspace-switch > svg { display: none; }
+.workspace-switch:focus-visible, .workspace-choice:focus-visible, .connection-help summary:focus-visible { outline: 2px solid var(--brand-fg); outline-offset: 3px; }
+@media (max-width: 600px) {
+  .setup-page { margin: 12px; padding: 20px; }
+  .workspace-entry { padding: 22px 16px; }
+  .workspace-entry-intro { margin-top: 38px; }
+  .workspace-choice { grid-template-columns: 1fr auto; padding: 18px; }
+  .workspace-choice span:last-child { grid-column: 1 / -1; }
+  .workspace-create { padding: 20px; }
+  .workspace-switch { display: grid; place-items: center; width: 34px; height: 34px; padding: 0; }
+  .workspace-switch > span { display: none; }
+  .workspace-switch > svg { display: block; }
+}

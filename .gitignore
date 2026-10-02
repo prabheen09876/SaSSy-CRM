@@ -1,0 +1,48 @@
+# Dependencies, local tools, and generated builds
+node_modules/
+dist/
+dev-dist/
+.wrangler/
+.agents/
+.codex/
+.temp/
+tmp/
+coverage/
+test-results/
+playwright-report/
+__pycache__/
+*.pyc
+*.log
+worker-configuration.d.ts
+.DS_Store
+Thumbs.db
+
+# Local configuration and credentials. Only reviewed examples are public.
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Customer exports, database files, and historical private installations
+*.csv
+*.xls
+*.xlsx
+*.db
+*.sqlite
+*.sqlite3
+legacy/
+supabase/archive/
+supabase/migrations/20260925_meta_short_form_route.sql
+
+# Publish the reviewed handbook, not other generated/customer artifacts.
+output/*
+!output/pdf/
+output/pdf/*
+!output/pdf/SaSSy_CRM_Handbook.pdf
+outputs/

@@ -1,0 +1,47 @@
+.workspace-profile fieldset { min-width: 0; border: 0; padding: 0; margin: 0; }
+.workspace-profile select, .workspace-profile textarea { width: 100%; }
+.workspace-profile textarea { min-height: 82px; resize: vertical; }
+.workspace-section-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; }
+.workspace-section-head h3 { font-size: 14px; margin: 0 0 5px; }
+.workspace-section-head p, .workspace-help, .workspace-field-empty { color: var(--ink-2); font-size: 12px; line-height: 1.6; margin: 0; }
+.workspace-custom-fields { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 23px; }
+.workspace-language { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 23px; }
+.workspace-stage-head { margin-top: 28px; }
+.workspace-stage-fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.workspace-blueprint { margin-top: 24px; padding: 20px; border-left: 3px solid var(--brand-fg); background: var(--surface-2); border-radius: 0 10px 10px 0; }
+.workspace-blueprint-head { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+.workspace-blueprint-head strong { font-size: 14px; }
+.workspace-blueprint-head > span { font-size: 11px; color: var(--ink-2); white-space: nowrap; }
+.workspace-blueprint > p { font-size: 12px; color: var(--ink-2); line-height: 1.65; margin-top: 8px; }
+.workspace-blueprint-nav { display: flex; gap: 24px; margin-top: 18px; border-bottom: 1px solid var(--line-2); font-size: 12px; overflow-wrap: anywhere; }
+.workspace-blueprint-nav > * { padding-bottom: 8px; }
+.workspace-blueprint-nav > strong { border-bottom: 2px solid var(--brand-fg); color: var(--brand-fg); }
+.workspace-blueprint-nav > span { color: var(--ink-2); }
+.workspace-blueprint-stages { display: flex; flex-wrap: wrap; gap: 7px; margin: 14px 0 4px; }
+.workspace-blueprint-stages > span { font-size: 11px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink-2); padding: 5px 9px; border-radius: 5px; overflow-wrap: anywhere; }
+.workspace-blueprint-stages > .workspace-blueprint-outcome { color: var(--success); border-color: var(--success); background: var(--success-soft); }
+.workspace-custom-field, .workspace-new-field { display: grid; grid-template-columns: minmax(0, 1fr) 150px auto; align-items: end; gap: 12px; padding: 14px 0; }
+.workspace-custom-field { border-bottom: 1px solid var(--line); }
+.workspace-custom-field > .field:last-child:nth-child(4), .workspace-new-field > .field:last-child:nth-child(4) { grid-column: 1 / -1; }
+.workspace-field-type { align-self: center; display: grid; gap: 4px; font-size: 12px; color: var(--ink-2); }
+.workspace-field-type small { font-size: 10px; color: var(--ink-3); }
+.workspace-new-field { margin-top: 12px; }
+.workspace-save-row { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 22px; }
+.workspace-save-row > p { max-width: 420px; }
+.workspace-save-row > button { flex-shrink: 0; }
+.workspace-error { border: 1px solid var(--danger); background: var(--danger-soft); color: var(--danger); border-radius: 8px; padding: 10px 12px; font-size: 13px; margin: 16px 0 0; }
+.workspace-preset-preview { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-top: 22px; }
+.workspace-preset-preview strong { font-size: 13px; }
+.workspace-preset-preview p { color: var(--ink-2); font-size: 13px; line-height: 1.55; margin: 7px 0; }
+.workspace-preset-preview span { font-size: 11px; color: var(--ink-2); }
+.workspace-setup { display: grid; min-height: calc(100dvh - 190px); place-items: center; padding: 22px 0; background: var(--bg); }
+.workspace-setup-card { width: min(680px, 100%); background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 42px; box-shadow: var(--shadow-float); }
+.workspace-setup h1 { margin: 0 0 15px; max-width: 500px; font-size: clamp(28px, 4vw, 38px); line-height: 1.13; letter-spacing: -.025em; font-weight: 600; }
+.workspace-intro { color: var(--ink-2); font-size: 14px; line-height: 1.7; margin-bottom: 28px; }
+@media (max-width: 600px) {
+  .workspace-setup-card { padding: 26px 20px; border-radius: 16px; }
+  .workspace-save-row, .workspace-section-head { flex-direction: column; align-items: stretch; gap: 12px; }
+  .workspace-custom-field, .workspace-new-field { grid-template-columns: minmax(0, 1fr) 100px; }
+  .workspace-stage-fields { grid-template-columns: minmax(0, 1fr); }
+  .workspace-custom-field > button, .workspace-new-field > button { grid-column: 1 / -1; justify-self: start; }
+}

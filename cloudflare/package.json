@@ -1,0 +1,19 @@
+{
+  "name": "workspace-crm-gateway",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "types": "wrangler types --env-interface Env --strict-vars false",
+    "check": "npm run types && tsc --noEmit",
+    "test": "node --test ../tests/gateway.test.js",
+    "dry-run": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260919.1",
+    "@types/node": "22.20.4",
+    "typescript": "7.0.2",
+    "wrangler": "4.135.0"
+  }
+}

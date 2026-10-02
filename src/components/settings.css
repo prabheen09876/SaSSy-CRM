@@ -1,0 +1,125 @@
+.settings-page { max-width: 1280px; margin: 0 auto; }
+.settings-page-head { padding-bottom: 18px; margin-bottom: 0; border-bottom: 1px solid var(--line); }
+.settings-layout { display: grid; grid-template-columns: 208px minmax(0, 1fr); gap: 32px; align-items: start; padding-top: 24px; }
+.settings-rail { position: sticky; top: 136px; min-width: 0; }
+.settings-workspace-name { display: grid; gap: 5px; padding: 0 12px 19px; }
+.settings-workspace-name strong { color: var(--ink); font-family: var(--font-display); font-size: 15px; overflow-wrap: anywhere; }
+.settings-workspace-name > span { color: var(--ink-3); font-size: 12px; }
+.settings-nav { display: grid; gap: 4px; }
+.settings-nav > button { display: flex; align-items: center; gap: 11px; width: 100%; padding: 11px 12px; border: 0; border-radius: 8px; background: transparent; color: var(--ink-2); font: inherit; font-size: 14px; font-weight: 550; text-align: left; cursor: pointer; }
+.settings-nav > button > svg { flex: 0 0 auto; opacity: .78; }
+.settings-nav > button:hover { background: var(--surface-2); color: var(--ink); }
+.settings-nav > button[aria-selected="true"] { background: var(--brand-soft); color: var(--brand-fg); font-weight: 700; }
+.settings-nav > button[aria-selected="true"] > svg { opacity: 1; }
+.settings-switch-workspace { margin: 19px 0 0 5px; }
+.settings-content { min-width: 0; max-width: 920px; }
+.settings-section { display: grid; gap: 18px; min-width: 0; }
+.settings-section:focus-visible { outline: 2px solid var(--brand-fg); outline-offset: 5px; border-radius: 5px; }
+.settings-section[hidden] { display: none; }
+.settings-section > .panel { margin: 0; }
+.settings-section .panel-h { color: var(--ink); font-family: var(--font-display); font-size: 15px; letter-spacing: -.015em; text-transform: none; }
+.settings-section .panel-h > span { display: inline-flex; align-items: center; gap: 8px; }
+.settings-section-heading { margin-bottom: 2px; }
+.settings-section-heading h2 { color: var(--ink); font-size: 22px; font-weight: 700; margin: 0 0 6px; }
+.settings-section-heading p { max-width: 68ch; color: var(--ink-3); font-size: 13.5px; line-height: 1.55; margin: 0; }
+.settings-intro { padding: 16px 0 6px; }
+.settings-intro h2 { max-width: 22ch; color: var(--ink); font-size: clamp(24px, 2.4vw, 32px); line-height: 1.17; font-weight: 700; margin: 0 0 12px; }
+.settings-intro p { max-width: 64ch; color: var(--ink-2); font-size: 14px; line-height: 1.65; margin: 0; }
+.settings-checklist { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); overflow: hidden; }
+.settings-checklist-row { width: 100%; display: flex; align-items: center; gap: 16px; padding: 22px; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.settings-checklist-row:last-child { border-bottom: 0; }
+.settings-checklist-row:hover { background: var(--surface-2); }
+.settings-checklist-row:focus-visible { outline-offset: -3px; }
+.settings-check-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--surface-2); color: var(--ink-3); display: grid; place-items: center; flex-shrink: 0; }
+.settings-check-icon.complete { background: var(--success-soft); color: var(--success); }
+.settings-check-copy { display: grid; gap: 5px; flex: 1; min-width: 0; }
+.settings-check-copy strong { font-size: 14px; font-weight: 650; }
+.settings-check-copy > span { color: var(--ink-3); font-size: 12.5px; line-height: 1.5; overflow-wrap: anywhere; }
+.settings-check-action { color: var(--brand-fg); font-size: 12.5px; font-weight: 700; flex-shrink: 0; }
+.settings-context-note { display: flex; align-items: flex-start; gap: 10px; color: var(--ink-3); padding: 2px 4px; }
+.settings-context-note > svg { flex-shrink: 0; margin-top: 3px; }
+.settings-context-note p { max-width: 78ch; margin: 0; font-size: 12px; line-height: 1.65; }
+.settings-privacy ul { margin: 0 0 14px; padding-left: 19px; display: grid; gap: 8px; color: var(--ink-2); font-size: 13px; line-height: 1.55; }
+.settings-privacy > p { margin: 0; font-size: 12px; }
+.settings-section .grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.settings-section .field { min-width: 0; }
+
+.saas-team { display: grid; gap: 18px; min-width: 0; }
+.saas-team .panel { margin: 0; }
+.saas-team-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.saas-team-heading > .btn { flex-shrink: 0; margin-top: 2px; }
+.saas-section-title { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 20px; }
+.saas-section-title > svg { color: var(--brand-fg); flex-shrink: 0; margin-top: 2px; }
+.saas-section-title h3, .saas-roster-heading h3, .saas-issued-invite h3 { color: var(--ink); font-size: 15px; line-height: 1.4; margin: 0; }
+.saas-section-title p { color: var(--ink-3); font-size: 12.5px; line-height: 1.55; margin: 4px 0 0; }
+.saas-invite-form { display: grid; grid-template-columns: minmax(180px, 1.5fr) minmax(130px, 1fr) auto; align-items: end; gap: 12px; }
+.saas-invite-form .field { margin: 0; }
+.saas-invite-form > button { min-height: 42px; }
+.saas-form-help { color: var(--ink-3); font-size: 12px; line-height: 1.6; margin: 12px 0 0; }
+.saas-issued-invite { border: 1px solid var(--brand-fg); border-left-width: 3px; border-radius: 10px; background: var(--brand-soft); padding: 17px 19px; }
+.saas-issued-invite > .row-between { gap: 14px; align-items: flex-start; flex-wrap: nowrap; }
+.saas-issued-invite > .row-between > button { flex-shrink: 0; }
+.saas-issued-invite > .row-between h3 { overflow-wrap: anywhere; }
+.saas-issued-invite > p { color: var(--ink-2); font-size: 12.5px; line-height: 1.6; margin: 8px 0 12px; }
+.saas-issued-invite > label { display: block; color: var(--ink-2); font-size: 12px; font-weight: 650; margin-bottom: 6px; }
+.saas-invitation-link { display: flex; gap: 8px; align-items: stretch; }
+.saas-invitation-link input { flex: 1; min-width: 0; border: 1px solid var(--line-2); border-radius: 7px; background: var(--surface); color: var(--ink); font: inherit; font-size: 12px; padding: 9px 10px; }
+.saas-invitation-link > button { flex-shrink: 0; }
+.saas-roster-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 14px; }
+.saas-roster-heading > span { font-size: 12px; }
+.saas-member { border-top: 1px solid var(--line); }
+.saas-member-row { display: flex; align-items: center; gap: 12px; padding: 16px 0; min-width: 0; }
+.saas-member:last-child .saas-member-row { padding-bottom: 0; }
+.saas-member-identity { display: grid; gap: 4px; min-width: 0; flex: 1; }
+.saas-member-identity strong { font-size: 13.5px; font-weight: 650; overflow-wrap: anywhere; }
+.saas-member-identity .badge { margin-left: 7px; }
+.saas-member-identity > span { color: var(--ink-3); font-size: 12px; overflow-wrap: anywhere; }
+.saas-member-access { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.saas-member-row > .btn { flex-shrink: 0; }
+.saas-member-editor { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(160px, 1fr); gap: 12px 18px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; margin-top: 14px; padding: 15px; }
+.saas-member-editor p { grid-column: 1 / -1; font-size: 12px; color: var(--ink-3); line-height: 1.55; margin: 0; }
+.saas-access-toggle { display: flex; align-items: center; gap: 9px; font-size: 13px; padding-top: 19px; cursor: pointer; }
+.saas-access-toggle input { width: 16px; height: 16px; flex-shrink: 0; accent-color: var(--brand-fg); }
+.saas-editor-actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; gap: 8px; }
+.saas-invitation-row { display: flex; gap: 12px; align-items: center; padding: 13px 0; border-top: 1px solid var(--line); }
+.saas-invitation-row > div { display: grid; gap: 4px; flex: 1; min-width: 0; }
+.saas-invitation-row strong { font-size: 13px; font-weight: 650; overflow-wrap: anywhere; }
+.saas-invitation-row > div > span { color: var(--ink-3); font-size: 12px; line-height: 1.5; }
+.saas-empty-note { color: var(--ink-3); font-size: 13px; line-height: 1.6; margin: 0; padding-bottom: 2px; }
+
+@media (max-width: 1100px) {
+  .settings-layout { grid-template-columns: 186px minmax(0, 1fr); gap: 22px; }
+  .saas-invite-form { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); }
+  .saas-invite-form > button { grid-column: 1 / -1; justify-self: start; }
+}
+@media (max-width: 760px) {
+  .settings-page-head { padding-bottom: 14px; }
+  .settings-layout { display: block; padding-top: 14px; }
+  .settings-rail { position: static; margin-bottom: 20px; }
+  .settings-workspace-name { display: none; }
+  .settings-nav { display: flex; gap: 5px; overflow-x: auto; overscroll-behavior-inline: contain; padding: 2px 2px 8px; scrollbar-width: thin; }
+  .settings-nav > button { flex: 0 0 auto; width: auto; padding: 9px 12px; font-size: 13px; white-space: nowrap; }
+  .settings-switch-workspace { margin: 5px 0 0; }
+  .settings-intro { padding-top: 0; }
+  .settings-checklist-row { padding: 17px 15px; gap: 11px; }
+  .settings-check-icon { width: 30px; height: 30px; border-radius: 8px; }
+  .settings-section-heading h2 { font-size: 21px; }
+  .saas-team-heading { flex-wrap: wrap; }
+  .saas-member-row { flex-wrap: wrap; gap: 10px; }
+  .saas-member-identity { flex-basis: calc(100% - 52px); }
+  .saas-member-access { margin-left: 44px; justify-content: flex-start; }
+  .saas-member-row > .btn { margin-left: auto; }
+}
+@media (max-width: 480px) {
+  .settings-section .grid2, .saas-invite-form, .saas-member-editor { grid-template-columns: minmax(0, 1fr); }
+  .settings-checklist-row { flex-wrap: wrap; }
+  .settings-check-copy { flex-basis: calc(100% - 43px); }
+  .settings-check-action { margin-left: 41px; }
+  .settings-section > .panel, .saas-team .panel { padding: 16px 14px; }
+  .saas-access-toggle { padding-top: 0; }
+  .saas-issued-invite { padding: 15px 13px; }
+  .saas-invitation-link { flex-direction: column; }
+  .saas-invitation-link > button { align-self: flex-start; }
+  .saas-invitation-row { flex-wrap: wrap; }
+  .saas-invitation-row > div { flex-basis: 100%; }
+}
