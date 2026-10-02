@@ -14,7 +14,7 @@ Prepared on 2 October 2026 for the SaSSy CRM GitHub repository.
 
 Local `.env` and `.env.production` files, credentials, local Cloudflare/Supabase state, customer exports, historical business-specific schemas, private campaign routing, internal deployment history, generated application bundles, dependency folders, and test screenshots are not part of this public snapshot.
 
-The original GitHub README is unchanged. Where it refers to a previous `.env.production`, understand that this file is not distributed. Supply your own reviewed public build configuration; no existing hosted database is configured for a fresh clone.
+The README now introduces the MIT-licensed open-source project and links directly to the setup handbook and Make guide. No configured `.env.production` is distributed. Supply your own reviewed public build configuration; no existing hosted database is configured for a fresh clone.
 
 The privacy page in this copy is a clearly marked setup notice. An operator must replace it with an accurate notice and appropriate contact information before collecting real customer data. It is not a legal policy or certification.
 
@@ -32,4 +32,4 @@ WhatsApp/Brevo CRM delivery, durable automation scheduling, provider onboarding,
 
 Keep real customer information and credentials out of commits, issues, test fixtures, and screenshots. Use synthetic records. Environment and export patterns are ignored as a safeguard, but every staged change still needs review.
 
-No software license has been selected by the owner. Public visibility alone does not grant an open-source license; see the repository README's License section.
+The owner has selected the [MIT License](../LICENSE) for SaSSy CRM's original source code and documentation. Preserve its copyright and permission notice when redistributing copies or substantial portions. Third-party materials retain their own licenses and notices. Licensing does not remove the security and production-readiness work described above.

@@ -1,17 +1,24 @@
 # SaSSy CRM
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 ### Your business. Your workflow. Your CRM.
 
-SaSSy CRM is a customizable, multi-business customer relationship management application built with **React, Vite, and Supabase**, with a frontend hosted on **Cloudflare Pages**.
+SaSSy CRM is an **open-source, MIT-licensed CRM** for teams that want to manage leads, adapt their workflows, and run their own deployment. It is built with **React, Vite, and Supabase**, with a frontend that can be hosted on **Cloudflare Pages**.
 
 It brings leads, follow-ups, customer activity, team access, and reporting into one workspace. Businesses can adapt their terminology, fields, and sales-stage labels without maintaining an entirely separate frontend.
+
+Use it for your business, fork it for a client, or build on it commercially under the [MIT License](LICENSE). The code is free to use; hosting, database, email, and messaging providers may charge separately. Contributions are welcome.
 
 **Project website:** [vertex-workspace-crm.pages.dev](https://vertex-workspace-crm.pages.dev/)
 
 > **Project status:** The core multi-workspace CRM is implemented. WhatsApp Business API and Brevo automation are extension targets that require additional backend services. This repository is a SaaS foundation, not a complete subscription-billing or turnkey marketing-automation platform.
 
+**Start here:** [Local setup](#getting-started) · [Complete setup guide](docs/SASSY_CRM_GUIDE.md) · [Download the PDF handbook](https://github.com/prabheen09876/SaSSy-CRM/raw/refs/heads/main/output/pdf/SaSSy_CRM_Handbook.pdf) · [Create Make automations](docs/MAKE_AUTOMATION_GUIDE.md)
+
 ## Contents
 
+- [Setup guides and handbook](#setup-guides-and-handbook)
 - [Features](#features)
 - [Technology stack](#technology-stack)
 - [Architecture](#architecture)
@@ -26,6 +33,19 @@ It brings leads, follow-ups, customer activity, team access, and reporting into 
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Setup guides and handbook
+
+The full getting-started handbook is included in this repository, alongside a focused Make.com walkthrough. You do not need to request access to read or download them.
+
+| Start with | What it covers |
+| --- | --- |
+| [Complete setup and management guide](docs/SASSY_CRM_GUIDE.md) | First login, workspace creation, daily CRM use, settings, teams, Supabase setup, hosting, maintenance, and troubleshooting. |
+| [45-page PDF handbook](output/pdf/SaSSy_CRM_Handbook.pdf) | A downloadable copy with a clickable contents page and the complete Make chapter. |
+| [Make.com automation creation guide](docs/MAKE_AUTOMATION_GUIDE.md) | Scenario creation, Facebook lead intake, WhatsApp/Brevo orchestration, scheduling, testing, duplicate protection, and error recovery. |
+| [All documentation](docs/README.md) | Integration contracts, migration guidance, privacy preparation, and known production limitations. |
+
+For a first look, run the local demo below; no backend account is required. For persistent team use, follow [Connect a Supabase backend](#connect-a-supabase-backend). Automation examples clearly mark the backend services that still need to be implemented.
 
 ## Features
 
@@ -119,9 +139,15 @@ Run commands from the application directory containing `package.json`. If the ap
 
 ### 1. Install dependencies
 
+For a fresh clone:
+
 ```sh
+git clone https://github.com/prabheen09876/SaSSy-CRM.git
+cd SaSSy-CRM
 npm ci
 ```
+
+If you already downloaded or cloned the project, run only `npm ci` from its root.
 
 ### 2. Configure a local demo
 
@@ -188,7 +214,7 @@ VITE_WORKER_URL=
 VITE_ALLOW_CONNECTION_SETUP=false
 ```
 
-The repository's existing `.env.production` may point to a previous installation. Replace or override its public connection settings deliberately before publishing your own build.
+This public repository does not include a configured `.env.production` or connect a fresh clone to an existing business database. Supply your own reviewed public build configuration before publishing. Inspect any environment files added locally and your hosting platform's build variables.
 
 | Variable | Purpose |
 | --- | --- |
@@ -299,7 +325,7 @@ Use a server-side scheduler or an external workflow tool such as n8n or Make thr
 
 Before enabling automation, test with synthetic records and recipients controlled by your team. Add a pause control, frequency limits, explicit retry rules, and monitoring. A timeout after sending may mean the provider accepted the message; reconcile uncertain outcomes instead of blindly sending again.
 
-See [integration contracts and route inventory](docs/integrations.md) and the [gateway guide](cloudflare/README.md).
+For step-by-step scenario creation, follow the [Make.com guide](docs/MAKE_AUTOMATION_GUIDE.md) or chapter 15 of the [complete handbook](docs/SASSY_CRM_GUIDE.md#15-create-make-automations). Also see [integration contracts and route inventory](docs/integrations.md) and the [gateway guide](cloudflare/README.md).
 
 ## Deployment
 
@@ -355,10 +381,16 @@ cloudflare/
   src/                 Optional connection gateway
   README.md            Gateway setup and security boundaries
 docs/
+  README.md            Documentation index
+  SASSY_CRM_GUIDE.md   Full setup, management, and automation handbook
+  MAKE_AUTOMATION_GUIDE.md  Step-by-step Make scenario creation
   integrations.md      Backend extension contracts
   data-migration.md    Migration precautions
+output/pdf/
+  SaSSy_CRM_Handbook.pdf  Downloadable handbook with the Make chapter
 tests/                 Automated checks
 public/                Public static assets
+LICENSE                MIT license
 ```
 
 The product name is **SaSSy CRM**. Some existing package names, browser-storage identifiers, and deployment names still use `workspace-crm`; the README does not rename those identifiers.
@@ -393,10 +425,18 @@ Subscription billing, plans, quotas, a platform-admin console, automatic invitat
 
 ## Contributing
 
+SaSSy CRM is an open-source project. If it helps you, star the repository, share the setup guide, or contribute an improvement. Useful areas include onboarding, documentation, accessibility, dependency maintenance, and workspace-safe integration adapters.
+
 Discuss substantial changes with the maintainer before implementation. Keep changes focused, preserve workspace isolation, add relevant tests, and update documentation when behavior changes.
+
+To contribute, fork the repository, create a branch for your change, run the relevant checks from [Testing](#testing), and open a pull request explaining the change and its verification.
 
 Use synthetic data for examples and tests. Do not include credentials or real customer records in commits, issues, or pull requests. Report suspected security issues privately to the maintainer rather than posting exploit details or sensitive data publicly.
 
 ## License
 
-A project license has not yet been specified. Public repository visibility does not by itself grant permission to reuse or redistribute the code. Contact the maintainer about permitted use, and add an appropriate `LICENSE` file before offering the project under an open-source license.
+SaSSy CRM's original source code and documentation are released under the [MIT License](LICENSE).
+
+You may use, copy, modify, distribute, sublicense, and sell copies, including in commercial products. Include the copyright and permission notice in copies or substantial portions of the software. The software is provided **as is, without warranty**; read the full license for its terms.
+
+Third-party packages, fonts, and other third-party materials retain their own licenses and notices. MIT licensing does not include free hosting, provider accounts, or permission to use somebody else's customer data or credentials.

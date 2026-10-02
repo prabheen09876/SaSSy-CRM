@@ -90,7 +90,7 @@ In the hosted SaaS model, the operator connects infrastructure once. Each custom
 - Opportunity values are estimates. Totals are grouped by currency; there is no automatic currency conversion.
 - An installable app shell is not offline synchronization of live CRM records.
 - The healthcare/wellness preset is for enquiries and scheduling, not regulated medical records.
-- Existing dependency advisories, especially around spreadsheet parsing, must be reviewed and resolved before relying on untrusted imports. See the dated warning in the [README](../README.md#production-readiness); its historical counts are not a fresh audit.
+- Existing dependency advisories, especially around spreadsheet parsing, must be reviewed and resolved before relying on untrusted imports. See the dated warning in the [publication notes](PUBLICATION_NOTES.md#verification-and-known-limitations); its historical counts are not a fresh audit.
 
 ## 3. Create an account and workspace
 
@@ -381,7 +381,7 @@ Create two synthetic test businesses with different accounts in staging. Confirm
 
 The application sends a selected `x-workspace-id` and scopes queries; PostgreSQL row-level security checks active membership. A workspace header is not authentication. Server-side integrations using elevated privileges must explicitly reproduce appropriate isolation checks because elevated keys bypass ordinary RLS.
 
-Standalone account provisioning differs and has no equivalent self-service workspace signup. See the [standalone instructions](../README.md#dedicated-single-business-installation) if intentionally choosing that mode.
+Standalone account provisioning differs and has no equivalent self-service workspace signup. See the [operating-mode comparison](../README.md#choose-an-operating-mode) if intentionally choosing that mode.
 
 ## 9. Set up authentication emails with Brevo
 
